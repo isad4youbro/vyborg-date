@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>сходишь со мной в выборг?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+
+<div class="progress-dots" id="dots">
+    <span class="on" data-i="0"></span>
+    <span data-i="1"></span>
+    <span data-i="2"></span>
+    <span data-i="3"></span>
+</div>
+
+<a href="#" class="back-link" id="backLink" style="display:none;">‹ назад</a>
+
+<div class="app">
+
+    <!-- SCREEN 1 — INVITATION -->
+    <section class="screen active" id="screen-0">
+        <div class="intro-content">
+            <svg class="castle-mark" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke="#7c2c46" stroke-width="2.5" stroke-linejoin="round">
+                    <path d="M20 110 L20 60 L35 60 L35 45 L50 45 L50 60 L65 60 L65 30 L80 15 L95 30 L95 60 L110 60 L110 45 L125 45 L125 60 L140 60 L140 110 Z"/>
+                    <line x1="10" y1="110" x2="150" y2="110"/>
+                    <circle cx="80" cy="10" r="2" fill="#c8a05e" stroke="none"/>
+                </g>
+            </svg>
+            <span class="eyebrow">четверг · 30 июля</span>
+            <h1>сходишь со мной в выборг?</h1>
+            <p class="subtitle">я тебя люблю и очень хочу провести с тобой целый день в этом городке — с башнями, мостами и кренделями</p>
+            <a href="#" class="btn" data-goto="1">смотреть условия</a>
+            <div class="scroll-hint">дальше — детали и весь план прогулки</div>
+        </div>
+    </section>
+
+    <!-- SCREEN 2 — CONDITIONS -->
+    <section class="screen" id="screen-1">
+        <div class="conditions-content">
+            <span class="eyebrow">условия</span>
+            <h2>детали поездки</h2>
+            <div class="cond-grid">
+                <div class="cond-card">
+                    <div class="label">дата</div>
+                    <div class="value">четверг, 30 июля</div>
+                </div>
+                <div class="cond-card">
+                    <div class="label">транспорт</div>
+                    <div class="value">туда и обратно на скоростной «ласточке»</div>
+                </div>
+                <div class="cond-card">
+                    <div class="label">билеты</div>
+                    <div class="value">берём в кассе на вокзале, льготные</div>
+                </div>
+                <div class="cond-card">
+                    <div class="label">в программе</div>
+                    <div class="value">старый город, замок, скальный парк, крендели и вафли</div>
+                </div>
+                <div class="cond-card wide">
+                    <div class="label">бюджет</div>
+                    <div class="value">вся поездка за мой счёт (если тебе повезёт и я заработаю, хпахапхапх) ♡ возьмём льготные билеты и вкусняшки на пикник</div>
+                </div>
+            </div>
+            <a href="#" class="btn" data-goto="2">погнали, покажи план</a>
+        </div>
+    </section>
+
+    <!-- SCREEN 3 — TIMELINE -->
+    <section class="screen" id="screen-2">
+        <div class="timeline-content">
+            <span class="eyebrow" style="display:block; text-align:center; margin: 0 auto 8px; width: fit-content;">30 июля</span>
+            <h2>наш маршрут</h2>
+
+            <div class="railway-wrap" id="railwayWrap">
+                <svg class="railway-svg" id="railwaySvg" xmlns="http://www.w3.org/2000/svg">
+                    <path id="railBase" d="" fill="none" stroke="rgba(124,44,70,0.18)" stroke-width="10"/>
+                    <path id="railTies" d="" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="2 12"/>
+                    <path id="railLine" d="" fill="none" stroke="var(--wine)" stroke-width="2" stroke-dasharray="14 8"/>
+                </svg>
+
+                <!-- 1 -->
+                <div class="timeline-item">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">08:30 – 09:15</span>
+                        <h3>встреча</h3>
+                        <p>встречаемся у метро «площадь ленина», у выходов к финляндскому вокзалу, около 09:05–09:15. в кассе берём билеты — льготные, по многодетности или как сопровождающему</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">мы вместе</span>
+                        <img src="images/our1.jpg" alt="мы вместе" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="timeline-item right">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">09:30 – 10:45</span>
+                        <h3>дорога на «ласточке»</h3>
+                        <p>выезжаем в 09:20 или 09:30. около часа в пути — и в 10:45 мы на старом выборгском вокзале</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">выборгский вокзал</span>
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/4468._Railway_station_Vyborg.jpg" alt="выборгский вокзал" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="timeline-item">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">10:45 – 12:00</span>
+                        <h3>старый город и крендели</h3>
+                        <p>идём в старый город через парки. заглянем в усадьбу бюргера — каменный дом зажиточного горожанина XVI века, и в пекарню рядом за настоящими выборгскими кренделями</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">выборгский крендель</span>
+                        <img src="images/vyborg_food.jpg" alt="выборгский крендель" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="timeline-item right">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">12:00 – 13:30</span>
+                        <h3>сердце средневековья</h3>
+                        <p>гуляем у часовой башни и мощёных переулков, увидим самый старый жилой дом в россии, ратушную площадь и набережную</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">старый выборг</span>
+                        <img src="images/vyborg_clock_tower.jpg" alt="часовая башня" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="timeline-item">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">13:30 – 14:15</span>
+                        <h3>обед</h3>
+                        <p>заходим в вафельную или пышечную — гонконгские или венские вафли, пышки, горячий кофе</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">мы вместе</span>
+                        <img src="images/our2.jpg" alt="мы вместе" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="timeline-item right">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">14:15 – 15:30</span>
+                        <h3>замковый остров</h3>
+                        <p>переходим мост на остров выборгского замка, гуляем по двору, смотрим на воду и залив</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">выборгский замок</span>
+                        <img src="images/vyborg_castle.jpg" alt="выборгский замок" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="timeline-item">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">15:30 – 17:30</span>
+                        <h3>парк монрепо</h3>
+                        <p>минут 25 пешком до скального парка (вход бесплатный по пушкинской карте или льготам). устроим маленький пикник среди скал и сосен</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">парк монрепо</span>
+                        <img src="images/vyborg_monrepos.jpg" alt="парк монрепо" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="timeline-item right">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">17:30 – 18:20</span>
+                        <h3>назад к вокзалу</h3>
+                        <p>если устанем — у входа в монрепо садимся на автобус (100 рублей), 10 минут — и мы у вокзала</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">мы вместе</span>
+                        <img src="images/our3.jpg" alt="мы вместе" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="timeline-item">
+                    <div class="tl-node"></div>
+                    <div class="tl-card">
+                        <span class="tl-time">18:20 – 19:50</span>
+                        <h3>домой</h3>
+                        <p>на вечерней «ласточке» (18:20 или 18:46) едем обратно, в питере будем около 19:30–19:50</p>
+                    </div>
+                    <div class="tl-photo">
+                        <span class="fallback-label">мы вместе</span>
+                        <img src="images/our4.jpg" alt="мы вместе" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-next">
+                <a href="#" class="btn" data-goto="3">дальше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 4 — GALLERY + CTA -->
+    <section class="screen" id="screen-3">
+        <div class="final-content">
+            <span class="eyebrow">ещё немного нас</span>
+            <h2>а вот так мы бы целовались и обнимались, если были бы щас вместе ♡</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-photo">
+                    <span class="fallback-label">images/our5.jpg</span>
+                    <img src="images/our5.jpg" alt="момент 1" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-photo">
+                    <span class="fallback-label">images/our6.jpg</span>
+                    <img src="images/our6.jpg" alt="момент 2" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-photo">
+                    <span class="fallback-label">images/our7.jpg</span>
+                    <img src="images/our7.jpg" alt="момент 3" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-photo">
+                    <span class="fallback-label">images/our8.jpg</span>
+                    <img src="images/our8.jpg" alt="момент 4" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-photo gallery-photo-wide">
+                    <span class="fallback-label">images/our9.jpg</span>
+                    <img src="images/our9.jpg" alt="момент 5" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <div class="cta-block">
+                <h3>ну что, поехали?</h3>
+                <p class="subtitle">я очень жду этого дня ♡</p>
+                <a href="https://t.me/pipipauy" target="_blank" class="btn agree-btn" id="agreeBtn">я согласна ♡</a>
+                <div class="agree-message" id="agreeMessage">уже собираю рюкзак получается, а ты уже пишешь мне в тг что меня любишь ♡</div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer class="credit">выборг · 30 июля</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
