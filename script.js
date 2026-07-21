@@ -77,7 +77,7 @@
             agreeMessage.classList.add('show');
             setTimeout(() => {
                 window.open(agreeBtn.href, '_blank');
-            }, 3200);
+            }, 5000);
         });
     }
 
